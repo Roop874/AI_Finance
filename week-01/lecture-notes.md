@@ -2,7 +2,7 @@
 
 ## Lecture Notes
 
-> **How this course works (say this on Day 1):** No PowerPoint. All notes are AI-generated Markdown, published to GitHub/Drive. We don't *study* the chain — we *build* on it. Every concept climbs the same **five-rung ladder**: (R1) see it → (R2) use it in a wallet → (R3) call it with code → (R4) build your own → (R5) hand it to your agent. Everything runs on **testnet — no real money, ever.**
+> **How this course works (say this on Day 1):** No PowerPoint — all notes are plain Markdown, published to GitHub/Drive. We don't *study* the chain — we *build* on it. Every concept climbs the same **five-rung ladder**: (R1) see it → (R2) use it in a wallet → (R3) call it with code → (R4) build your own → (R5) hand it to your agent. Everything runs on **testnet — no real money, ever.**
 
 ### Learning Objectives
 
@@ -53,7 +53,7 @@ It's not a company's database (a company can quietly edit its own). It's a snaps
 
 In one line: **Bitcoin keeps "money" simple and hard to break; Ethereum ties "money + programmable rules" together.** This course builds "agents that execute financial strategy on their own," which needs **programmable rules** — so our main arena is **Ethereum-family (EVM) chains and their cheap Layer-2s**. (Bitcoin isn't "worse," it's a **different trade-off** — we revisit this in Week 6 on market structure.)
 
-> **R1 live demo (open it in class):** <https://txcity.io/v/eth-btc> — the two streets are **Ethereum vs. Bitcoin**, side by side. It turns each chain into a bus system: **people queuing = pending transactions, each bus = a block, the fare = the fee.** A free live view of these two models. **Plant one detail — "the higher-fare person boards first" — Week 4's MEV grows straight out of it.**
+> **R1 live demo (open it in class):** <https://txcity.io/v/eth-btc> — the two streets are **Ethereum vs. Bitcoin**, side by side. It turns each chain into a bus system: **people queuing = pending transactions, each bus = a block, the fare = the fee.** A free live view of these two models. **One detail worth planting: the higher-fare rider boards first — on-chain, a higher fee buys earlier inclusion.**
 
 **③ A smart contract is just "that piece of code attached to an address."**
 Because Ethereum is an account-plus-code model, you can write "loan terms" or "swap rules" as a program deployed at an address that anyone can call, that runs exactly as written, and that no one can alter mid-way. **"Law becomes code," in technical terms, is exactly this.** (More in Part 5.)
@@ -164,7 +164,6 @@ Today you managed to "hold + transfer an asset." Follow that one thing forward, 
 | You can transfer, but **nobody trades with you** | **Week 2: AMM** — swapping with no counterparty |
 | Liquidity is deep, and you want **limit orders / leverage** | **Week 6: central-limit order books (CLOB) + perpetuals & derivatives** (Hyperliquid) |
 | You want to **use money without selling your coins** | **Week 3: lending & liquidation** |
-| Your tx must **queue in a public waiting room**, and order decides who profits | **Week 4: MEV** — order = money, tied to chain mechanics & the **mempool**; traditional **HFT** plays the same "who's first" game |
 | **Hand any of the above to an agent** that signs and executes on its own | **Weeks 5 & 7: agent-ification and integration** |
 
 > **In one line: Week 1 teaches you to *touch* this objective world (read + send one); every week after teaches you to *do* something more complex on it; and finally, to hand it to an agent.**
