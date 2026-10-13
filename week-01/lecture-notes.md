@@ -42,7 +42,7 @@ Before we install tools, let's be clear about *what we're actually dealing with*
 **① A blockchain = one objective, public ledger that can only change by the rules.**
 It's not a company's database (a company can quietly edit its own). It's a snapshot of state that **the whole network agrees on, anyone can read, and updates only by fixed rules**. "How much you have, what's locked in this contract" isn't "whatever some server says" — it's an **objective fact** anyone can independently verify. This is the bedrock for everything later: agents can do business without trusting each other precisely because the ledger is objective and the rules execute automatically.
 
-**② Two main chains, two accounting models (get this difference and you understand half the field).**
+**② Two main chains, two accounting models (get this difference and a lot of the rest clicks into place).**
 
 | | **Bitcoin** | **Ethereum** |
 |---|---|---|
@@ -51,7 +51,7 @@ It's not a company's database (a company can quietly edit its own). It's a snaps
 | What it can compute | script is **deliberately limited**: multisig, timelocks, hashlocks — mainly "who's allowed to spend this" | **Turing-complete**: arbitrary logic, and an address can also carry **code (a contract)** |
 | Best at | simple, rock-solid, ultra-auditable **store & transfer of value** | arbitrary **financial logic** — DeFi, lending, AMMs live here |
 
-In one line: **Bitcoin makes "money" maximally simple and reliable; Ethereum ties "money + programmable rules" together.** This course builds "agents that execute financial strategy on their own," which needs **programmable rules** — so our main arena is **Ethereum-family (EVM) chains and their cheap Layer-2s**. (Bitcoin isn't "worse," it's a **different trade-off** — we revisit this in Week 6 on market structure.)
+In one line: **Bitcoin keeps "money" simple and hard to break; Ethereum ties "money + programmable rules" together.** This course builds "agents that execute financial strategy on their own," which needs **programmable rules** — so our main arena is **Ethereum-family (EVM) chains and their cheap Layer-2s**. (Bitcoin isn't "worse," it's a **different trade-off** — we revisit this in Week 6 on market structure.)
 
 > **R1 live demo (open it in class):** <https://txcity.io/v/eth-btc> — the two streets are **Ethereum vs. Bitcoin**, side by side. It turns each chain into a bus system: **people queuing = pending transactions, each bus = a block, the fare = the fee.** A free live view of these two models. **Plant one detail — "the higher-fare person boards first" — Week 4's MEV grows straight out of it.**
 
@@ -109,7 +109,7 @@ To *do* anything on-chain, you send a **transaction** — a message signed by yo
 - The network **recovers your address from the signature** — proving it's you — without you revealing the key.
 - The **nonce** (a counter) stops the same signed message from being replayed twice.
 
-**This "sign an intent, the network verifies and executes" pattern is the spine of everything** — it's the same shape as an agent placing a trade or authorizing a payment (we'll see it again in Weeks 5–6).
+**This "sign an intent, the network verifies and executes" pattern is the spine of the course** — it's the same shape as an agent placing a trade or authorizing a payment (we'll see it again in Weeks 5–6).
 
 ### Hands-On: The Four Basic web3.py Operations (R3 code + R2 UI)
 
@@ -153,7 +153,7 @@ A **smart contract** is a program deployed to an address. Anyone can call its fu
 
 In class you ran three things **by hand** (read / send / interact). The **homework** (see `lab-exercise.md`) has you do the core arc yourself on Base Sepolia: prove your environment, **read** the chain, and **send** an asset to a classmate — R1→R3, no magic left standing.
 
-> **Where the agent comes in:** handing these operations to a self-signing agent — and the guardrails that must come with a private key — is the job of **Week 5** ("coordinator / signer separation"), not Week 1.
+> **Where the agent comes in:** handing these operations to a self-signing agent — and the guardrails that must come with a private key — is the job of **Week 4** (the agent: *brain judges, hands execute*, behind a confirm gate), not Week 1.
 
 ### Part 7: This Session Is the Map of the Whole Course (each week answers a question Week 1 raises)
 
@@ -178,7 +178,7 @@ Today you managed to "hold + transfer an asset." Follow that one thing forward, 
 A **stablecoin** (e.g., USDC) is a token pegged to $1. It's the unit everyone prices in, because raw crypto is too volatile to quote a coffee in.
 
 - On-chain, USDC is *just a smart contract* tracking balances.
-- It supports **gasless transfer authorizations** (EIP-3009) — you *sign* a transfer and someone else submits it. **Hold onto this; it's the engine of the x402 payment agent in Week 5.**
+- It supports **gasless transfer authorizations** (EIP-3009) — you *sign* a transfer and someone else submits it. **Hold onto this; it's the engine of the x402 payment agent in Week 7.**
 
 ### Part 2: Swap and the AMM (`x * y = k`)
 

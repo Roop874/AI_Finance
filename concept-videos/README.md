@@ -28,7 +28,7 @@ Short, animated **explainer videos** that accompany the whole course — a **ful
 **W5 · Quant — what you can do on a CEX (e.g. OKX)**
 9. **Common Quant Strategies** — what are you betting on? four buckets: direction / spread / flow / sizing.
 10. **Quant Metrics 101** — how to judge a strategy: drawdown, Sharpe, Calmar (from a real backtest).
-11. **What is Cash-and-Carry** — futures must converge, so you lock the basis; up, down or flat, always the same profit.
+11. **What is Cash-and-Carry** — futures must converge, so you lock the basis; whichever way price goes, the same locked-in spread.
 12. **What is a Perpetual** — spot plus a funding "spring"; never expires, still leveraged.
 
 **W6 · On-chain & a new game**
